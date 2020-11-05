@@ -14,7 +14,8 @@ class Add extends React.Component{
     }
     
     add(){
-        const name  = this.state.name;
+        var name  = this.state.name;
+        name      = name.trim();
         
         if(name){
             axios.post('https://04ec10c43d39.ngrok.io/api/v1/name/addName',{name:name})
